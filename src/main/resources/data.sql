@@ -1,0 +1,3 @@
+INSERT INTO todo (id, description, created, updated, completed) VALUES ('51dedec0-6f14-4772-a0b3-e2ca72850b20', 'todo1', '2023-04-05 11:11', '2023-04-05 11:12', false)
+INSERT INTO todo (id, description, created, updated, completed) VALUES ('51dedec0-6f14-4772-a0b3-e2ca72850b21', 'todo2', '2023-04-05 11:13', '2023-04-05 11:14', false)
+INSERT INTO todo (id, description, created, updated, completed) VALUES ('51dedec0-6f14-4772-a0b3-e2ca72850b22', 'todo3', '2023-04-05 11:15', '2023-04-05 11:15', false)
