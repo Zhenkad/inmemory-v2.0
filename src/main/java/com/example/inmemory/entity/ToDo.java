@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Data
 @Entity
 @NoArgsConstructor
+@Table(name = "Inmemory")
 public class ToDo {
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -26,7 +28,7 @@ public class ToDo {
     private LocalDateTime created;
     private LocalDateTime updated;
     private boolean completed;
-
+    
     @PrePersist
     public void onCreate(){
         this.created = LocalDateTime.now();
