@@ -32,6 +32,7 @@ public class ToDo {
     @PrePersist
     public void onCreate(){
         this.created = LocalDateTime.now();
+        this.updated = LocalDateTime.now();
     }
 
     @PreUpdate
