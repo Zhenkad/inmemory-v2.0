@@ -1,5 +1,6 @@
 package com.example.inmemory.Controller;
 
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,16 @@ public class MainController {
         this.repository = repository;
     }
 
-    @GetMapping("/")
-    public String index(Model model){
+    @GetMapping("/info")
+    public String login(Model model){
         model.addAttribute("todos", repository.findAll());
         repository.findAll();
         return "index";
+    }
+
+    @GetMapping("/")
+    public String login(){
+        return "login";
     }
 
     @GetMapping("/addTodo")
