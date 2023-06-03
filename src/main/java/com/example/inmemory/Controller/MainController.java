@@ -17,14 +17,14 @@ public class MainController {
         this.repository = repository;
     }
 
-    @GetMapping("/info")
+    @GetMapping("/")
     public String login(Model model){
         model.addAttribute("todos", repository.findAll());
         repository.findAll();
         return "index";
     }
 
-    @GetMapping("/")
+    @GetMapping("/verify")
     public String login(){
         return "login";
     }
