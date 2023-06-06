@@ -17,12 +17,12 @@
     <form method="post" th:action="@{/addUser}" th:object="${user}" style="margin: 50px;">
         <input type="text" id="input" th:field="*{id}" hidden="hidden">
         <div class="input-group mb-3">
-            <label for="description" class="form-label">Логин</label>
-            <input id="description" type="text" class="form-control" placeholder="Описание" th:field="*{userName}">
+            <label for="userName" class="form-label">Логин</label>
+            <input id="userName" type="text" class="form-control" placeholder="Имя пользователя" th:field="*{userName}">
         </div>
         <div>
-            <label for="description" class="form-label">Пароль</label>
-            <input id="description" type="text" class="form-control" placeholder="Описание" th:field="*{passwd}">
+            <label for="passwd" class="form-label">Пароль</label>
+            <input id="passwd" type="text" class="form-control" placeholder="Пароль" th:field="*{passwd}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -33,7 +33,8 @@ public class MainController {
     }
 
     @GetMapping("/register")
-    public String register(){
+    public String register(Model model){
+        model.addAttribute("user", new Users());
         return "register";
     }
 
