@@ -19,7 +19,7 @@ public class WebSecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder(null);
+        return new BCryptPasswordEncoder(16);
     }
 
     protected void configure(HttpSecurity http) throws Exception {
